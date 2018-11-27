@@ -28,7 +28,7 @@
                         <i class="glyphicon glyphicon-user"></i>
                         用户管理
                     </a></li>
-                <li><a href="#">
+                <li><a href="#" class="category">
                         <i class="glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
@@ -45,23 +45,46 @@
         </div>
     </div>
 
-    <!-- 顶部 -->
-    <div class="lt_header">
-        <a href="#" class="icon-left pull-left">
-            <i class="glyphicon glyphicon-align-justify"></i></a>
+    <div class="lt_contain">
+        <!-- 顶部 -->
+        <div class="lt_header">
+            <a href="#" class="icon-left pull-left">
+                <i class="glyphicon glyphicon-align-justify"></i></a>
 
-        <a href="#" class="icon-left pull-right">
-            <i class="glyphicon glyphicon-log-out"></i></a>
+            <a href="#" class="icon-right pull-right">
+                <i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+
+        <!-- 内容 -->
+        <div class="lt_main">
+            <div class="container-fluid">
+                <div class="main_nav">
+                    <ol class="breadcrumb">
+                        <li><a href="#">管理系统</a></li>
+                        <li class="active">用户管理</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
-    <!-- 内容 -->
-    <div class="lt_main">
-        <div class="container">
-            <div class="main_nav">
-                <ol class="breadcrumb">
-                    <li><a href="#">管理系统</a></li>
-                    <li class="active">用户管理</li>
-                </ol>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                        <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary logOutBtn">退出</button>
+                </div>
             </div>
         </div>
     </div>
@@ -70,6 +93,7 @@
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/isLogin.js"></script>
+    <script src="./js/index.js"></script>
 </body>
-
 </html>

@@ -28,7 +28,13 @@ a:hover, a:focus{
     left: 0;
     top: 0;
     z-index: 999;
+    transition: 1s;
 }
+.lt_aside.hidden_aside{
+    left:-180px;
+}
+
+
 .title{
     width: 180px;
     height: 50px;
@@ -84,10 +90,23 @@ a:hover, a:focus{
 .lt_aside .nav ul li .child{
     display: none;
 }
+.lt_aside .nav ul li .child.active{
+    display: block;
+}
 .lt_aside .nav ul li .child a{
     padding-left: 60px;
 }
 
+/* 右侧内容 */
+.lt_contain{
+    padding-left: 180px;
+    padding-top: 50px;
+    height: 1000px;
+    transition: 1s;
+}
+.lt_contain.hidden_contain{
+     padding-left: 0;   
+}
 /* 头部样式 */
 .lt_header{
     width: 100%;
@@ -97,6 +116,10 @@ a:hover, a:focus{
     position: fixed;
     left: 0;
     top: 0;
+    transition: 1s;
+}
+.lt_header.hidden_header{
+    padding-left: 0;
 }
 .lt_header a{
     width: 50px;
@@ -111,11 +134,7 @@ a:hover, a:focus{
 }
 
 /* 内容 */
-.lt_main{
-    height: 1000px;
-    padding-left: 180px;
-    padding-top: 50px;
-}.lt_main .main_nav{
+.lt_main .main_nav{
     margin-top:20px;
 }
 .lt_main .main_nav a{
@@ -126,3 +145,6 @@ a:hover, a:focus{
     color:#23527c;
 }
 
+.modal .tip{
+    color:#A94442;
+}
