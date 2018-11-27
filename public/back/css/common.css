@@ -96,6 +96,10 @@ a:hover, a:focus{
 .lt_aside .nav ul li .child a{
     padding-left: 60px;
 }
+.lt_aside .nav ul li .child a.active{
+    border-left: 3px solid #069;
+    background-color: #1D1F21;
+}
 
 /* 右侧内容 */
 .lt_contain{
