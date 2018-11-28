@@ -139,4 +139,11 @@ a:hover{
 .icon-tip{
     color:#A94442;
 }
+/* 图表 */
+
+.contain .main .echarts_left,
+.contain .main .echarts_right{
+    width: 48%;
+    height: 400px;
+}
 
