@@ -11,82 +11,120 @@
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
 </head>
+
 <body>
-      <!-- 侧边栏 -->
-      <div class="lt_aside">
-            <div class="title">
-                <a href="#">黑马31期</a>
-            </div>
-            <div class="user">
-                <img src="./images/1.jpg" alt="">
-                <p>超级管理员</p>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li class="active"><a href="user.html">
-                            <i class="glyphicon glyphicon-user"></i>
-                            用户管理
-                        </a></li>
-                    <li><a href="#" class="category">
-                            <i class="glyphicon glyphicon-list"></i>
-                            分类管理
-                        </a>
-                        <div class="child" style="display: block">
-                            <a href="first.html">一级分类</a>
-                            <a href="second.html">二级分类</a>
-                        </div>
-                    </li>
-                    <li><a href="product.html">
-                            <i class="glyphicon glyphicon-tags"></i>
-                            商品管理
-                        </a></li>
-                </ul>
+    <!-- 侧边栏 -->
+    <div class="lt_aside">
+        <div class="title">
+            <a href="#">黑马31期</a>
+        </div>
+        <div class="user">
+            <img src="./images/1.jpg" alt="">
+            <p>赖冠霖</p>
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="active"><a href="user.html">
+                        <i class="glyphicon glyphicon-user"></i>
+                        用户管理
+                    </a></li>
+                <li><a href="#" class="category">
+                        <i class="glyphicon glyphicon-list"></i>
+                        分类管理
+                    </a>
+                    <div class="child" style="display: block">
+                        <a href="first.html">一级分类</a>
+                        <a href="second.html">二级分类</a>
+                    </div>
+                </li>
+                <li><a href="product.html">
+                        <i class="glyphicon glyphicon-tags"></i>
+                        商品管理
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lt_contain">
+        <!-- 顶部 -->
+        <div class="lt_header">
+            <a href="#" class="icon-left pull-left">
+                <i class="glyphicon glyphicon-align-justify"></i></a>
+
+            <a href="#" class="icon-right pull-right">
+                <i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+
+        <!-- 内容 -->
+        <div class="lt_main">
+            <div class="container-fluid">
+                <div class="main_nav">
+                    <ol class="breadcrumb">
+                        <li><a href="#">管理系统</a></li>
+                        <li class="active">用户管理</li>
+                    </ol>
+                </div>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>手机号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>itcast</td>
+                            <td>15757771111</td>
+                            <td>正常</td>
+                            <td><button class="btn btn-danger">禁用</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-    
-        <div class="lt_contain">
-            <!-- 顶部 -->
-            <div class="lt_header">
-                <a href="#" class="icon-left pull-left">
-                    <i class="glyphicon glyphicon-align-justify"></i></a>
-    
-                <a href="#" class="icon-right pull-right">
-                    <i class="glyphicon glyphicon-log-out"></i></a>
-            </div>
-    
-            <!-- 内容 -->
-            <div class="lt_main">
-                <div class="container-fluid">
-                    <div class="main_nav">
-                        <ol class="breadcrumb">
-                            <li><a href="#">管理系统</a></li>
-                            <li class="active">用户管理</li>
-                        </ol>
-                    </div>
+    </div>
+    <script type="text/html" id="tmp">
+        {{each list v i}}
+            <tr>
+                <td>{{v.id}}</td>
+                <td>{{v.username}}</td>
+                <td>{{v.mobile}}</td>
+                <td>正常</td>
+                <td>
+                    {{if v.isDelete == 1}}
+                       <button class="btn btn-danger">禁用</button>
+                    {{else if v.isDelete == 0}}
+                        <button class="btn btn-success">启用</button>
+                    {{/if}}
+                </td> 
+            </tr>
+            {{/each}}
+        </script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary logOutBtn">退出</button>
                 </div>
             </div>
         </div>
-        
-    
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                    </div>
-                    <div class="modal-body">
-                            <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？</p>
-                      
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="button" class="btn btn-primary logOutBtn">退出</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
@@ -94,6 +132,8 @@
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
+    <script src="./lib/template/template-web.js"></script>
+    <script src="./js/user.js"></script>
 </body>
 
 </html>

@@ -26,7 +26,7 @@ var option1 = {
     ]
 };
 
-// 使用刚指定的配置项和数据显示图表。
+// 使用刚指定的配置项和数据显示图表
 myChart.setOption(option1);
 
 var myChart = echarts.init(document.querySelector(".echarts_right"));
