@@ -152,3 +152,10 @@ a:hover, a:focus{
 .modal .tip{
     color:#A94442;
 }
+
+/* 图表 */
+.main_echarts .left,
+.main_echarts .right{
+    width: 48%;
+    height: 400px;
+}
