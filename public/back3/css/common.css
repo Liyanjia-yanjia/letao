@@ -27,6 +27,10 @@ a:hover{
     left: 0;
     top: 0;
     z-index: 999;
+    transition: 1s;
+}
+.lt_aside.hide_aside{
+    left: -180px;
 }
 .lt_aside .title{
     width: 180px;
@@ -96,6 +100,10 @@ a:hover{
     background-color: #3C8DBC;
     padding-left: 180px;
     padding-top: 50px;
+    transition: 1s;
+}
+.contain.hide_contain{
+    padding-left: 0;
 }
 .contain .icon {
     position: fixed;
@@ -104,7 +112,11 @@ a:hover{
     padding-left: 180px;
     height: 50px;
     z-index: 998;
+    transition: 1s;
     width: 100%;
+}
+.contain .icon.hide_icon{
+    padding-left:0;
 }
 .contain .icon a{
     width: 50px;
@@ -119,8 +131,12 @@ a:hover{
 /* 主要内容 */
 .contain .main .bread{
     margin-top:20px;   
-
+    
 }
 .contain .main .bread a{
     color:#337AB7;
 }
+.icon-tip{
+    color:#A94442;
+}
+

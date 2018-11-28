@@ -30,7 +30,7 @@
                             <span>用户管理</span>
                         </a></li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="category">
                             <i class="glyphicon glyphicon-list"></i>
                             <span>分类管理</span>
                         </a>
@@ -39,7 +39,7 @@
                             <a href="second.html">二级分类</a>
                         </div>
                     </li>
-                    <li><a href="category.html">
+                    <li><a href="product.html">
                             <i class="glyphicon glyphicon-tags"></i>
                             <span>商品管理</span>
                         </a></li>
@@ -64,11 +64,30 @@
         <!-- 主要内容 -->
         <div class="main">
             <div class="container-fluid">
-                
+
                 <ol class="breadcrumb bread">
                     <li><a href="#">管理系统</a></li>
-                    <li class="active">用户管理</li>
+                    <li class="active">首页</li>
                 </ol>
+            </div>
+        </div>
+
+        <!-- 模态框 -->
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                    </div>
+                    <div class="modal-body icon-tip">
+                       <i class="glyphicon glyphicon-info-sign "></i>您确定要退出后台管理系统吗？
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary log-out">退出</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -77,6 +96,7 @@
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/isLogin.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
