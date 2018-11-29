@@ -137,3 +137,8 @@ a:focus{
 .modal .tip{
     color:#A94442;
 }
+
+#nprogress .bar{
+    background-color: aqua;
+    /* height: 5px; */
+}

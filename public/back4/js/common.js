@@ -2,7 +2,10 @@ $(document).ajaxStart(function () {
     NProgress.start();
 })
 $(document).ajaxStop(function () {
-    NProgress.done();
+    setTimeout(function () {
+        NProgress.done();
+    },1000)
+
 })
 
 $(function () {
