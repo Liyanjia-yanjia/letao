@@ -49,15 +49,15 @@ $(function () {
                     validators: {
                         notEmpty: {
                             message: "请输入一级分类名称"
-                        }
+                        },
+                        
                     }
                 }
             }
         });
 
         $("#firstForm").on('success.form.bv',function (e) {
-            // e.preventDefault();
-            alert(111);
+            e.preventDefault();
             console.log("gg");
             $.ajax({
                 url: '/category/addTopCategory',
@@ -66,8 +66,10 @@ $(function () {
                 data: $("#firstForm").serialize(),
                 success:function (info) {
                     console.log(info);
-                    // $("#firstModal").modal("hide");
-                    // render();
+                    $("#firstModal").modal("hide");
+                    render();
+
+                    $("#firstForm").data('bootstrapValidator').resetForm(true);
                 }
             })
         })
