@@ -76,29 +76,31 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>itcast</td>
-                            <td>15757771111</td>
-                            <td>正常</td>
-                            <td><button class="btn btn-danger">禁用</button></td>
-                        </tr>
+                        <!-- 挖坑 -->
                     </tbody>
                 </table>
+
+                <div class="page_box text-right">
+                    <ul id="paginator">
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+
     <script type="text/html" id="tmp">
-        {{each list v i}}
+        {{each rows v i}}
             <tr>
-                <td>{{v.id}}</td>
+                <td>{{ i+1 + (page - 1)*size}}</td>
                 <td>{{v.username}}</td>
                 <td>{{v.mobile}}</td>
-                <td>正常</td>
-                <td>
+                <td>{{v.isDelete === 1?'正常':'禁用'}}</td>
+                <td data-id="{{v.id}}">
                     {{if v.isDelete == 1}}
                        <button class="btn btn-danger">禁用</button>
-                    {{else if v.isDelete == 0}}
+                    {{else}}
                         <button class="btn btn-success">启用</button>
                     {{/if}}
                 </td> 
@@ -106,7 +108,26 @@
             {{/each}}
         </script>
 
-    <!-- Modal -->
+    <!-- 状态改变模态框 -->
+    <div class="modal fade" id="changeModal" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p class="tip"><i class="glyphicon glyphicon-info-sign"></i>您确定要执行此操作吗？</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary confirm_btn">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--退出模态框 -->
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
@@ -130,6 +151,7 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
     <script src="./lib/template/template-web.js"></script>
