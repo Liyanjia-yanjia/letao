@@ -4,9 +4,136 @@
 .mt-150{
     margin-top:150px;
 }
+a{
+    color:#fff;
+
+}
+a:hover,
+a:focus{
+    color:#fff;
+    text-decoration: none;    
+}
+
+
+
 .panel-title{
     height: 40px;
     line-height: 40px;
     font-size: 20px;
     text-align: center;
+}
+.lt_aside{
+    width: 180px;
+    height: 1000px;
+    background-color: #222D32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 1s;
+}
+.lt_aside.hide_aside{
+    left: -180px;
+}
+.lt_aside .title{
+    width: 180px;
+    height: 50px;
+    background-color: #367FA9;
+    text-align: center;
+    color:#fff;
+    line-height: 50px;
+    font-size: 26px;
+}
+.lt_aside .user{
+    width: 180px;
+    height: 150px;
+    margin-top:30px;
+}
+.lt_aside .user img{
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    display: block;
+    border-radius: 50%;
+}
+.lt_aside .user p{
+    font-size: 20px;
+    color:#fff;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.lt_aside .nav ul{
+    list-style: none;
+    padding-left: 0;
+}
+.lt_aside .nav li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+}
+.lt_aside .nav li a.active{
+    border-left: 3px solid #006699;
+    background-color: #1D1F21;
+}
+.lt_aside .nav li i{
+    margin-right: 5px;
+}
+.lt_aside .nav li .child{
+    display: none;
+}
+.lt_aside .nav li .child a{
+    padding-left: 60px;
+}
+
+.lt_contain{
+    padding-left: 180px;
+    padding-top: 50px;
+    width: 100%;
+    transition: 1s;
+}
+.lt_contain.hide_contain{
+    padding-left: 0;
+}
+.lt_contain .header{
+    height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 180px;
+    z-index: 998;
+    transition: 1s;
+}
+.lt_contain .header.hide_header{
+    padding-left: 0;
+}
+.lt_contain .header a{
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+}
+.lt_contain .header i{
+    font-size: 20px;
+    line-height: 50px;
+}
+.lt_contain .main{
+    width: 100%;
+    height: 1000px;
+    background-color: pink;
+}
+.lt_contain .main .bread{
+    margin-top: 20px;
+}
+.lt_contain .main .bread a:first-child{
+    color:#337AC4;
+}
+
+.modal .tip{
+    color:#A94442;
 }
