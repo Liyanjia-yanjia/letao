@@ -142,3 +142,9 @@ a:focus{
     background-color: aqua;
     /* height: 5px; */
 }
+
+.echart-left,
+.echart-right{
+    width: 48%;
+    height: 400px;
+}
