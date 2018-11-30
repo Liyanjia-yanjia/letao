@@ -67,8 +67,62 @@
 
                 <ol class="breadcrumb bread">
                     <li><a href="#">管理系统</a></li>
+                    <li><a href="#">分类管理</a></li>
                     <li class="active">一级分类</li>
                 </ol>
+
+                <button class="btn btn-default btn-add">添加分类</button>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="20%">序号</th>
+                            <th width="80%">一级分类名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 挖坑 -->
+                    </tbody>
+                </table>
+
+                <div class="pageBox text-right">
+                    <ul id="pagintor">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/html" id="firstTpl">
+            {{each rows v i}}
+                <tr>
+                    <td>{{i+1 + (page-1)*size}}</td>
+                    <td>{{v.categoryName}}</td>
+                </tr>
+            {{/each}}
+        </script>
+
+        <!-- 添加一级分类模态框 -->
+        <div class="modal fade" id="firstModal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title">添加分类</h4>
+                    </div>
+                    <form id="firstForm">
+                        <div class="modal-body icon-tip">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类名">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-primary btn-confirm">确定</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -81,7 +135,7 @@
                         <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
                     </div>
                     <div class="modal-body icon-tip">
-                       <i class="glyphicon glyphicon-info-sign "></i>您确定要退出后台管理系统吗？
+                        <i class="glyphicon glyphicon-info-sign "></i>您确定要退出后台管理系统吗？
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -94,10 +148,12 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/first.js"></script>
 </body>
 
 </html>
