@@ -69,8 +69,44 @@
                     <li><a href="#">管理系统</a></li>
                     <li class="active">用户管理</li>
                 </ol>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>手机号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       <!-- 挖坑 -->
+                    </tbody>
+                </table>
+
+                <div class="pageBox pull-right">
+                    <ul id="pagintor"></ul>
+                </div>
             </div>
         </div>
+        <script type="text/html" id="tmp">
+            {{each rows v i}}
+                <tr>
+                    <td>{{i+1 +(page-1)*size}}</td>
+                    <td>{{v.username}}</td>
+                    <td>{{v.mobile}}</td>
+                    <td>{{ v.isDelete === 1?'正常':'禁用' }}</td>
+                    <td>
+                        {{if v.isDelete === 1 }}
+                        <button class="btn btn-danger">禁用</button>
+                        {{else}}
+                        <button class="btn btn-success">启用</button>
+                        {{/if}}
+                    </td>
+                </tr>
+            {{/each}}
+        </script>
 
         <!-- 模态框 -->
         <div class="modal fade" id="myModal" tabindex="-1">
@@ -81,7 +117,7 @@
                         <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
                     </div>
                     <div class="modal-body icon-tip">
-                       <i class="glyphicon glyphicon-info-sign "></i>您确定要退出后台管理系统吗？
+                        <i class="glyphicon glyphicon-info-sign "></i>您确定要退出后台管理系统吗？
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -94,10 +130,12 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>    
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/user.js"></script>
 </body>
 
 </html>
