@@ -54,6 +54,10 @@ $(function () {
         $(".cateTxt").text(value);
 
         $("#secondForm").data('bootstrapValidator').updateStatus('categoryId','VALID')
+
+        var id = $(this).parent().data("id");
+        $("[name='categoryId']").val(id);
+
     })
 
     $("#fileupload").fileupload({

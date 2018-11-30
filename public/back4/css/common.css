@@ -147,3 +147,11 @@ a:focus{
     width: 48%;
     height: 400px;
 }
+
+.table-bordered > thead > tr > th,
+ .table-bordered > tbody > tr > th,
+.table-bordered > thead > tr > td, 
+.table-bordered > tbody > tr > td{
+    text-align: center;
+    vertical-align: middle;
+}

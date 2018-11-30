@@ -81,7 +81,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                       <!-- 挖坑 -->
+                        <!-- 挖坑 -->
                     </tbody>
                 </table>
 
@@ -97,7 +97,7 @@
                     <td>{{v.username}}</td>
                     <td>{{v.mobile}}</td>
                     <td>{{ v.isDelete === 1?'正常':'禁用' }}</td>
-                    <td>
+                    <td data-id="{{v.id}}"> 
                         {{if v.isDelete === 1 }}
                         <button class="btn btn-danger">禁用</button>
                         {{else}}
@@ -107,6 +107,25 @@
                 </tr>
             {{/each}}
         </script>
+
+        <!-- 改变状态模态框 -->
+        <div class="modal fade" id="changeModal" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title">温馨提示</h4>
+                    </div>
+                    <div class="modal-body icon-tip">
+                        <i class="glyphicon glyphicon-info-sign "></i>您确定要执行此操作吗？
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="sumbit" class="btn btn-primary btn-confirm">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- 模态框 -->
         <div class="modal fade" id="myModal" tabindex="-1">
@@ -130,7 +149,7 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>    
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
