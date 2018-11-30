@@ -120,7 +120,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类">
+                            <input type="text" name="brandName" class="form-control" placeholder="请输入二级分类">
                         </div>
 
                         <div class="form-group">
@@ -133,13 +133,13 @@
                             <!-- 隐藏域 -->
                             <input type="hidden" name="brandLogo">
                             <div id="imgBox">
-                                <img style="width:100px;" src="./images/none.png" alt="">
+                                <img style="height:50px;" src="./images/none.png" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                        <button type="sumbit" class="btn btn-primary">添加</button>
+                        <button type="sumbit" class="btn btn-primary btn-confirm">添加</button>
                     </div>
                 </form>
             </div>
@@ -172,7 +172,7 @@
             <td>{{v.categoryName}}</td>
             <td>{{v.brandName}}</td>
             <td>
-                <img src="{{v.brandLogo}}" style="width:100px" alt="">
+                <img src="{{v.brandLogo}}" style="height:50px" alt="">
             </td>
         </tr>
         {{/each}}

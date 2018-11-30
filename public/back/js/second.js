@@ -5,6 +5,7 @@ $(function () {
 
     render();
 
+    //渲染页面
     function render() {
         $.ajax({
             url: '/category/querySecondCategoryPaging',
@@ -32,6 +33,7 @@ $(function () {
         })
     }
 
+    //显示模态框，发送请求获取一级分类
     $(".add-btn").on('click', function () {
         $("#secondModal").modal("show");
         $.ajax({
@@ -51,6 +53,7 @@ $(function () {
         })
     })
 
+    //给按钮赋值，给隐藏域添加id
     $(".dropdown-menu").on('click', 'a', function () {
         var value = $(this).text();
         // input标签获取值val(),其他标签获取值text()
@@ -58,21 +61,30 @@ $(function () {
         $(".dropdownTxt").text(value);
 
         var id = $(this).parent().data("id");
+
         $("[name='categoryId']").val(id);
-        console.log(id);
+
         $("#secondForm").data('bootstrapValidator').updateStatus('categoryId','VALID')
        
     })
 
+    //上传图片
     $("#fileupload").fileupload({
         dataType:'json',
         done:function (e,data) {
             // console.log(data);
             $("#imgBox img").attr("src",data.result.picAddr);
+
+            //给隐藏域设置图片地址
+            $("[name='brandLogo']").val(data.result.picAddr);
+            console.log(data.result.picAddr);
+
+            //更新状态
             $("#secondForm").data('bootstrapValidator').updateStatus('brandLogo','VALID')
         }
     })
 
+    //表单校验
     $("#secondForm").bootstrapValidator({
 
         //校验隐藏域
@@ -109,5 +121,29 @@ $(function () {
                 }
             }
         }
+    })
+
+    //阻止默认提交，使用ajax提交
+    $("#secondForm").on("success.form.bv",function (e) {
+        e.preventDefault();
+        
+        $.ajax({
+            url:'/category/addSecondCategory',
+            data:$("#secondForm").serialize(),
+            type:'post',
+            dataType:'json',
+            success:function (info) {
+                console.log(info);
+
+                $("#secondModal").modal("hide");
+                currentPage = 1;
+                render();
+
+                //表单重置
+                $("#secondForm").data('bootstrapValidator').resetForm(true);
+                $(".dropdownTxt").text("请选择一级分类");
+                $("#imgBox img").attr("src","./images/none.png");
+            }
+        })
     })
 })
