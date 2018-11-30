@@ -94,7 +94,7 @@
     <div class="modal fade" id="secondModal" tabindex="-1">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
-                <form id="firstForm">
+                <form id="secondForm">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                         <h4 class="modal-title">添加分类</h4>
@@ -106,13 +106,17 @@
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
                                     data-toggle="dropdown">
-                                    请选择一级分类
+                                    <span class="dropdownTxt">请选择一级分类</span>
                                     <span class="caret"></span>
                                 </button>
+
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                     <!-- 挖坑 -->
                                 </ul>
                             </div>
+
+                            <!-- 隐藏域 -->
+                            <input type="hidden" name="categoryId">
                         </div>
 
                         <div class="form-group">
@@ -120,11 +124,17 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="btn btn-default">上传图片</button>
+                            <label for="fileupload" class="btn btn-default">上传图片</label>
+                            <input type="file" name="pic1" data-url="/category/addSecondCategoryPic" id="fileupload"
+                                style="display:none;">
                         </div>
 
                         <div class="form-group">
-                            <img style="width:100px;" src="./images/none.png" alt="">
+                            <!-- 隐藏域 -->
+                            <input type="hidden" name="brandLogo">
+                            <div id="imgBox">
+                                <img style="width:100px;" src="./images/none.png" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -170,7 +180,7 @@
 
     <script type="text/html" id="cateTpl">
         {{each rows v i}}
-            <li><a href="#">{{v.categoryName}}</a></li>
+            <li data-id="{{v.id}}"><a href="#">{{v.categoryName}}</a></li>
         {{/each}}
         </script>
 
@@ -178,6 +188,8 @@
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./lib/template/template-web.js"></script>
     <script src="./js/common.js"></script>
