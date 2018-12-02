@@ -62,9 +62,9 @@ $(function () {
     $("#fileupload").fileupload({
         dataType:'json',
         done:function (e,data) {
-            // console.log(data);
+            console.log(data);
             var picObj = data.result;
-            // console.log(picObj);
+            console.log(picObj);
             picArr.unshift(picObj);
             var picUrl = picObj.picAddr;
             $(".imgBox").prepend("<img src="+ picUrl +" style='width:100px;'>");

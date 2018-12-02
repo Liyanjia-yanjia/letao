@@ -1,19 +1,30 @@
+/* 通用样式 */
 html,body{
     height: 100%;
     width: 100%;
 }
+img{
+    display: block;
+    width: 100%;
+}
+/* 页面 */
 .lt_contain{
     min-width: 320px;
     max-width: 640px;
     height: 100%;
-    background-color: #87CEEB;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
     padding-bottom: 55px;
     padding-top: 45px;
     
 }
+/* 头部区域 */
 .lt_header{
     height: 45px;
     width: 100%;
+    min-width: 320px;
+    max-width: 640px;
     background-color: #006699;
     text-align: center;
     line-height: 45px;
@@ -21,8 +32,7 @@ html,body{
     color:#fff;
     padding-left: 45px;
     padding-right: 45px;
-    position: relative;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -47,13 +57,15 @@ html,body{
     height: 55px;
     width: 100%;
     background-color: #006699;
-
-}
-.lt_footer {
-    position: fixed;
+    min-width: 320px;
+    max-width: 640px;
+    position: absolute;
     bottom: 0;
     left: 0;
+    margin: 0 auto;
 }
+
+/* 底部区域 */
 .lt_footer ul{
     list-style: none;
     padding: 0;
@@ -73,6 +85,42 @@ html,body{
     color:#fff;
     
 }
+/* 中间区域 */
 .lt_main{
     height: 100%;
+    /* mui中图片轮播是利用定位做的 */
+    position: relative;
+    background-color: #fff;
+}
+
+/* 产品区域 */
+.product{
+    padding: 10px;
+
+}
+.product ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.product ul li{
+    width: 48%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    margin-bottom:20px;
+}
+.product ul li:nth-child(odd){
+    margin-right: 4%;
+}
+.product ul li a{
+    display: block;
+    text-align: center;
+}
+.product .price{
+    color: red;
+}
+.product .oldPrice{
+    text-decoration: line-through;
 }
