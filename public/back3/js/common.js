@@ -13,7 +13,7 @@ $(".category").on('click', function () {
 })
 
 //2.侧边栏的退出与进入
-$(".contain .icon_left").on('click', function () {
+$(".icon .pull-left").on('click', function () {
     $(".lt_aside").toggleClass("hide_aside");
     $(".contain .icon").toggleClass("hide_icon");
     $(".contain").toggleClass("hide_contain");
