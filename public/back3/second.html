@@ -51,8 +51,8 @@
 
     </div>
 
-    <!-- 右边内容 -->
     <div class="contain">
+        <!-- 顶部 -->
         <div class="icon">
             <a href="#" class="pull-left">
                 <i class="glyphicon glyphicon-align-justify"></i>
@@ -61,6 +61,7 @@
                 <i class="glyphicon glyphicon-log-out"></i>
             </a>
         </div>
+
         <!-- 主要内容 -->
         <div class="main">
             <div class="container-fluid">
@@ -87,14 +88,12 @@
                     </tbody>
                 </table>
 
+                <!-- 分页 -->
                 <div class="pageBox pull-right">
                     <ul id="pagintor"></ul>
                 </div>
-
             </div>
         </div>
-
-
 
         <!-- 添加二级分类模态框 -->
         <div class="modal fade" id="secondModal" tabindex="-1">
@@ -120,11 +119,13 @@
                                     </ul>
                                 </div>
                                 <input type="hidden" name="categoryId" >
+                                <input type="hidden" name="hot" value="1">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" name="categoryName" placeholder="请输入二级分类名">
+                                <input type="text" class="form-control" name="brandName" placeholder="请输入二级分类名">
                             </div>
+                            
                             <div class="form-group">
                                <label for="fileupload" class="btn btn-default">上传图片</label>
                                <input type="file" style="display:none" id="fileupload" 
@@ -144,7 +145,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- 模态框 -->
         <div class="modal fade" id="myModal" tabindex="-1">
@@ -166,21 +166,21 @@
         </div>
     </div>
 
-    
+    <!-- 模板 -->
     <script type="text/html" id="secondTpl">
         {{each rows v i}}
-        <tr>
-            <td>{{i+1 + (page-1)*size}}</td>
-            <td>{{v.categoryName}}</td>
-            <td>{{v.brandName}}</td>
-            <td>
-                <img src="{{v.brandLogo}}" alt="" style="width:100px;">
-            </td>
-        </tr>
+            <tr>
+                <td>{{i+1 + (page-1)*size}}</td>
+                <td>{{v.categoryName}}</td>
+                <td>{{v.brandName}}</td>
+                <td>
+                    <img src="{{v.brandLogo}}" alt="" style="width:100px;">
+                </td>
+            </tr>
         {{/each}}
-    
     </script>
-
+    
+    <!-- 分类模板 -->
     <script type="text/html" id="cateTpl">
         {{each rows v i}}
         <li data-id="{{v.id}}"><a href="#">{{v.categoryName}}</a></li>

@@ -129,14 +129,16 @@
             </div>
         </div>
     </div>
+
+    <!-- 模板 -->
     <script type="text/html" id="firstTpl">
         {{each rows v i}}
-        <tr>
-            <td>{{i+1 + (page-1)*size}}</td>
-            <td>{{v.categoryName}}</td>
-        </tr>
+            <tr>
+                <td>{{i+1 + (page-1)*size}}</td>
+                <td>{{v.categoryName}}</td>
+            </tr>
         {{/each}}
-        </script>
+    </script>
 
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
