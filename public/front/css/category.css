@@ -1,0 +1,56 @@
+.nav-left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.nav-left ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-left ul li{
+    height: 50px;
+    background-color: #e3e4e5;
+
+}
+.nav-left ul li a{
+    display: block;
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color:#666;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.nav-left ul li a.active{
+    background-color: #fff;
+    border-right:none;
+}
+.nav-right{
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+.nav-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.nav-right ul li{
+    width: 33.3%;
+    float: left;
+}
+.nav-right ul li a{
+    display: block;
+}
+.nav-right ul li a p{
+    text-align: center;
+}
+.nav-right ul li img{
+    width: 70px;
+    height: 50px;
+    margin:0 auto;
+}

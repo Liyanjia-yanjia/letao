@@ -81,6 +81,12 @@ img{
     display: block;
     margin-top: 6px;
 }
+.lt_footer ul li a.active{
+   color:orange;
+}
+.lt_footer ul li a.active p{
+    color:orange;
+}
 .lt_footer ul li a p{
     color:#fff;
     
