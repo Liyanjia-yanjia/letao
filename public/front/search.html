@@ -26,19 +26,7 @@
             <input type="text" placeholder="请输入关键字">
             <button class="mui-btn mui-btn-primary btn-search">搜索</button>
             <div class="history">
-                <div class="title mui-clearfix">
-                    <span class="mui-pull-left">搜索历史</span>
-                    <span class="mui-pull-right">清空记录</span>
-                </div>
-                <div class="content">
-                <ul class="mui-clearfix ">
-                    <li><a href="#">哈哈</a></li>
-                    <li><a href="#">哈哈</a></li>
-                    <li><a href="#">哈哈</a></li>
-                    <li><a href="#">哈哈</a></li>
-                    <li><a href="#">哈哈</a></li>
-                </ul>
-            </div>
+                <!-- 挖大坑 -->
             </div>
         </div>
         <!-- 底部 -->
@@ -67,12 +55,32 @@
             </ul>
         </div>
     </div>
-
-
+    <script type="text/html" id="historyTpl">
+        {{if list.length !==0}}
+        <div class="title mui-clearfix">
+            <span class="mui-pull-left">搜索历史</span>
+            <span class="mui-pull-right btn-empty"><i class="fa fa-trash"></i>
+                清空记录</span>
+        </div>
+        <div class="content">
+            <ul class="mui-clearfix ">
+                {{each list v i}}
+                    <li>
+                        <a href="searchList.html?key={{v}}">{{v}}</a>
+                        <i  data-index="{{i}}" class="mui-icon mui-icon-closeempty mui-pull-right btn-delete"></i>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    {{else}}
+         <p>没有更多历史记录</p>
+    {{/if}}
+    </script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/search.js"></script>
 </body>
 
 </html>

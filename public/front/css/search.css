@@ -25,12 +25,21 @@
     margin: 0;
     list-style: none;
     border: 1px dashed skyblue;
-    padding: 10px;
 }
 .content ul li{
     height: 30px;
-    line-height: 30px;
     border-bottom: 1px dashed skyblue;
+    line-height: 30px;
+    text-indent: 5px;
+    font-size: 14px;
 }
+
 .content ul li a{
+    color:#666;
+}
+.content ul li  i{   
+    line-height: 30px;
+}
+.content ul li:last-child{
+    border-bottom: none;
 }
