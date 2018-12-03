@@ -22,13 +22,32 @@
         </div>
 
         <div class="lt_content">
-           
+            <div class="nav_left">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul>
+                            <!-- 挖坑 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_right">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="mui-clearfix">
+                            <!-- 挖坑 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="lt_footer">
             <ul class="mui-clearfix">
                 <li>
-                    <a href="#">
+                    <a href="index.html">
                         <i class="fa fa-home"></i>
                         <p>首页</p>
                     </a>
@@ -53,8 +72,20 @@
                 </li>
             </ul>
         </div>
+        <script type="text/html" id="cateTpl">
+            {{each rows v i}}
+            <li><a href="#" data-id={{v.id}} class="{{i === 0?'current':''}}">{{v.categoryName}}</a></li>
+            {{/each}}
+        </script>
+        <script type="text/html" id="category">
+
+            <li>
+                    <a href="#"><img src="./images/brand2.png" alt="">
+                    <span>海岸</span></a>
+                </li></script>
     </div>
     <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/category.js"></script>

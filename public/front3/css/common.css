@@ -20,6 +20,7 @@ img{
     padding-top: 45px;
     padding-bottom: 55px;
     position: relative;
+    overflow: hidden;
 }
 /* 头部区域 */
 .lt_header{
@@ -82,4 +83,9 @@ img{
 }
 .lt_footer ul li a.current p{
     color:orange;
+}
+.lt_content{
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
 }
