@@ -1,0 +1,19 @@
+.lt_main {
+    padding: 0;
+}
+.lt_main .sort{
+    height: 30px;
+    background-color: #eee;
+    width: 100%;
+    padding: 0 10px;
+}
+.lt_main .sort a{
+    display:block;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    color:#666;
+    float: left;
+}

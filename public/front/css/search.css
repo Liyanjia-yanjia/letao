@@ -1,6 +1,4 @@
-.lt_main{
-    padding: 10px;
-}
+
 .lt_main input{
     width: 100%;
     height: 34px;
@@ -9,6 +7,13 @@
     border: 1px solid #007aff;
     font-size: 14px;
     position: relative;
+    margin:0;
+}
+.lt_main .search{
+    padding: 10px;
+}
+.history{
+    padding: 10px;
 }
 .btn-search{
     position: absolute;
