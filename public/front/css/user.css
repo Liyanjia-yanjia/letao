@@ -4,6 +4,9 @@ ul{
     margin: 0;
     padding: 10px;
 }
+.lt_main li.top{
+    overflow: hidden;
+}
 .lt_main li{
     padding: 10px;
     border-bottom: 1px solid #ccc;

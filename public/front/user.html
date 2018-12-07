@@ -24,24 +24,23 @@
         <!-- 内容 -->
         <div class="lt_main">
             <ul>
-                <li>
+                <li class="top">
                     <div class="pic mui-pull-left">
                         <img src="./images/user.jpg" alt="">
                     </div>
                     <div class="info">
-                        <p>itcast</p>
-                        <p>绑定手机: 15757771111 </p>
+                        <!-- 挖坑 -->
                     </div>
                 </li>
-                <li>
+                <li class="info-box">
                     <span>账号与安全</span>
                     <i class="mui-navigate-right"></i>
                 </li>
-                <li>
+                <li class="info-box">
                     <span>我的购物车</span>
                     <i class="mui-navigate-right"></i>
                 </li>
-                <li>
+                <li class="info-box">
                     <span>收货地址管理</span>
                     <i class="mui-navigate-right"></i>
                 </li>
@@ -77,8 +76,15 @@
             </ul>
         </div>
     </div>
+    <script type="text/html" id="tmp">
+            <p>{{username}}</p>
+            <p>绑定手机: {{mobile}} </p>
+    </script>
     <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/user.js"></script>
 </body>
 
 </html>

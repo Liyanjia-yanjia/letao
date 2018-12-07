@@ -1,0 +1,90 @@
+.lt_main .pic{
+    border-bottom: 1px solid #ccc;
+}
+.lt_main .title{
+    padding: 10px;
+    font-weight: 700;
+}
+.lt_main .price{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lt_main .price .txt{
+    font-size: 16px;
+}
+.lt_main .price .price-num{
+    color:red;
+}
+.lt_main .price .oldPrice{
+    color:#666;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+.lt_main .size{
+    padding: 10px;
+}
+.lt_main .size span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 23px;
+    font-size: 14px;
+    margin:3px;
+}
+.lt_main .num {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.lt_main .num .minus,
+.lt_main .num .plus,
+.lt_main .num .input{
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #bbb;
+}
+.lt_main .num .input input{
+    height: 100%;
+    margin-bottom:0;
+    text-align: center;
+    padding: 0;
+    vertical-align: middle;
+}
+.lt_main .num .txt{
+    font-size: 14px;
+    color:#666;
+}
+.lt_main .detail{
+    border-bottom: 1px solid red;
+    padding: 10px;
+}
+.lt_footer{
+    height: 100px;
+    background-color: #ccc;
+    font-size: 16px;
+    padding: 10px;
+}
+.lt_footer .go{
+    color:skyblue;
+}
+.lt_contain{
+}
+.lt_footer{
+    height: 55px;
+    width: 100%;
+    background-color: #efeff4;
+}
+.lt_footer a{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.lt_footer .mui-btn-red{
+
+}
