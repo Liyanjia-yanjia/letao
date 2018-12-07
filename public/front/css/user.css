@@ -1,0 +1,43 @@
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+}
+.lt_main li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.lt_main li i{
+    font-size: 20px;
+}
+.pic{
+    width: 40px;
+    height: 40px;
+}
+.info{
+    padding-left: 50px;
+}
+.info p{
+    margin-bottom:0;
+}
+.info p:first-child{
+    font-size: 18px;
+    color:#000;
+}
+.lt_main .back{
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+
+}
+.lt_main .back a{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 100%;
+    color:#000;
+    text-align: center;
+    line-height: 40px;
+}

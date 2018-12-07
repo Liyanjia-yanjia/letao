@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="lt_contain">
+        <!-- 头部 -->
+        <div class="lt_header">
+                <a href="javascript: history.go(-1);" class="icon-left"><i class="mui-icon mui-icon-back"></i></a>
+                登录
+            </div>
+
+        <!-- 内容 -->
+        <div class="lt_main">
+            <div class="import">
+                <div class="username">
+                    <label for="username">用户名</label>
+                    <input type="text" placeholder="请输入用户名" id="username">
+                </div>
+                <div class="password">
+                        <label for="password">密码</label>
+                        <input type="text" placeholder="请输入密码" id="password">
+                        <span class="mui-icon mui-icon-eye"></span>
+                    </div>
+                    <div class="button">
+                        <button class="mui-btn mui-btn-primary btn-login">登录</button>
+                        <button class="mui-btn mui-btn-danger btn-reset">重置</button>
+                    </div>
+                    
+
+            </div>
+
+            
+        </div>
+        <!-- 底部 -->
+        <div class="lt_footer">
+            <ul>
+                <li><a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li><a href="category.html">
+                        <i class="fa fa-bars"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li><a href="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li><a href="user.html" class="active">
+                        <i class="fa fa-user"></i>
+                        <p>用户中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

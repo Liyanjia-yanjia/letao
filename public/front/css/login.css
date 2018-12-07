@@ -1,0 +1,35 @@
+
+.lt_main .import .username,
+.lt_main .import .password{
+    border-bottom: 1px dashed #ccc;
+    padding: 10px;
+}
+.lt_main .import  label{
+    width: 100px;
+    display: inline-block;
+}
+.lt_main .import  input{
+    width: 60%;
+    height: 0;
+    border:none;
+    margin-left:30px;
+    margin-bottom: 0;
+}
+.lt_main .password{
+    position: relative;
+}
+.lt_main .password span{
+    position: absolute;
+    right: 10px;
+    color:#ccc;
+    top: 8px;
+}
+.lt_main .import .button{
+    text-align: center;
+    padding:10px 0;
+    border-bottom: 1px dashed #ccc;
+}
+.lt_main .import .button button{
+    width: 60px;
+    height: 35px;
+}
