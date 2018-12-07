@@ -17,3 +17,25 @@
     color:#666;
     float: left;
 }
+.lt_main .sort a.active{
+    color:orange;
+}
+.loading{
+    width: 100px;
+    height: 100px;
+    border: 10px solid #000;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    animation: rotate 1s;
+
+}
+@keyframes rotate {
+    from {
+        transform: translateX(-50%) rotate(0)
+    }
+    to{
+        transform: translateX(-50%) rotate(360deg)
+    }
+} 

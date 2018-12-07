@@ -65,7 +65,7 @@ $(function () {
         }
         var arr = getHistory();
         var i = arr.indexOf(value);
-        if(i !==-1){
+        if(i !== -1){
             arr.splice(i,1);
         }
         if(arr.length >=10){
@@ -74,7 +74,7 @@ $(function () {
         arr.unshift(value);
         localStorage.setItem("search_list",JSON.stringify(arr));
         render();
-        $(".lt_main input").val("");
-        location.href="search.html?key="+value;
+        $(".lt_main input").val("请输入关键字");
+        location.href="searchList.html?key="+value;
     })
 })
