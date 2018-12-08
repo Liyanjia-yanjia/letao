@@ -23,10 +23,11 @@
 .loading{
     width: 100px;
     height: 100px;
-    border: 10px solid #000;
+    border: 10px solid #ccc;
     position: absolute;
     left: 50%;
     top: 200px;
+    border-radius: 20px;
     transform: translateX(-50%);
     animation: rotate 1s;
 

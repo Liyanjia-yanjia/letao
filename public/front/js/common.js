@@ -21,7 +21,7 @@ gallery.slider({
       var value = v.split("=")[1];
       obj[key] = value;
     })
-    console.log(obj[k]); 
+    // console.log(obj[k]); 
     return obj[k];
   }
   // getSearch("key");

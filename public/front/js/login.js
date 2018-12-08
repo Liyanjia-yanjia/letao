@@ -25,11 +25,10 @@ $(function () {
                     return;
                 }
                 if (info.success) {
-                    console.log(location.search);
-
+                    // console.dir(location);
                     if (location.search.indexOf("retUrl") != -1) {
-                        var location = str.replace("?retUrl", '');
-                        location.href = "location";
+                        var local = location.search.replace("?retUrl",'');
+                        location.href = local;
                     } else {
                         location.href = "user.html";
                     }

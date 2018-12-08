@@ -37,31 +37,19 @@
 .lt_main .num {
     padding: 10px;
     border: 1px solid #ccc;
-}
-.lt_main .num .minus,
-.lt_main .num .plus,
-.lt_main .num .input{
-    display: inline-block;
-    text-align: center;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: #f9f9f9;
-    border: 1px solid #bbb;
-}
-.lt_main .num .input input{
-    height: 100%;
-    margin-bottom:0;
-    text-align: center;
-    padding: 0;
-    vertical-align: middle;
+
 }
 .lt_main .num .txt{
     font-size: 14px;
     color:#666;
 }
+
+.orange{
+    background-color: orange;
+    color:#fff;
+}
 .lt_main .detail{
-    border-bottom: 1px solid red;
+
     padding: 10px;
 }
 .lt_footer{
@@ -76,6 +64,7 @@
 .lt_contain{
 }
 .lt_footer{
+    border-top: 1px solid red;
     height: 55px;
     width: 100%;
     background-color: #efeff4;
@@ -84,6 +73,7 @@
     display: inline-block;
     padding: 8px 16px;
     border-radius: 4px;
+    margin-right:10px;
 }
 .lt_footer .mui-btn-red{
 

@@ -8,4 +8,18 @@ $(function () {
             $('.top .info').html(htmlStr);
         }
     })
+
+    $(".btn-back").on("click",function () {
+        $.ajax({
+            url:'/user/logout',
+            dataType:'json',
+            type:'get',
+            success:function (info) {
+                console.log(info);
+                if(info.success){
+                    location.href = "login.html";
+                }
+            }
+        })
+    })
 })
