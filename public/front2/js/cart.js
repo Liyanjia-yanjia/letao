@@ -20,7 +20,6 @@ $(function() {
           location.href = "login.html?retUrl=" + location.href;
           return;
         }
-
         // 说明当前用户已登录, 返回的购物车数组, 需要包装
         var htmlStr = template( 'cartTpl', { list: info } );
         $('#cartList').html( htmlStr );

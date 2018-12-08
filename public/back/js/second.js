@@ -106,7 +106,7 @@ $(function () {
                     }
                 }
             },
-            categoryName:{
+            brandName:{
                 validators:{
                     notEmpty:{
                         message:"请输入二级分类名"

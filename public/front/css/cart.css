@@ -1,0 +1,41 @@
+.lt_main ul {
+    padding: 0 10px ;
+}
+.lt_main ul li{
+    padding: 0 10px 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.lt_main ul li a{
+    width: 100%;
+    display: block;
+    padding-bottom: 30px;
+}
+.lt_main ul li .pic{
+    width: 60px;
+    height:60px;
+    float: left;
+}
+.lt_main ul li .info{
+    overflow: hidden;
+    padding-left: 20px;
+}
+.lt_main ul li .info p{
+    color: #000;
+    margin-bottom: 0;
+}
+.lt_main ul li .info .oldPrice{
+    color:#666;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+.lt_main ul li .info .price{
+    color:red;
+    font-size: 16px;
+}
+.lt_main ul li .info .size{
+    color:#666;
+}
+.lt_main ul li .info .num{
+    color:#666;
+}

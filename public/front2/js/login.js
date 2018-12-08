@@ -41,15 +41,14 @@ $(function() {
           // 登录成功
           // (1) 如果有传参过来, 需要跳回去
           // (2) 如果没有传参过来, 正常用户中心w
-          console.log(location.search);
           if ( location.search.indexOf( "retUrl" ) != -1 ) {
             // 有传参, 跳回去  "?retUrl=http://localhost:3000/front/product.html?productId=7"
             var retUrl = location.search.replace("?retUrl=", "");
-            // location.href = retUrl;
+            location.href = retUrl;
           }
           else {
             // 没有传参, 去用户中心
-            // location.href = "user.html";
+            location.href = "user.html";
           }
         }
       }
