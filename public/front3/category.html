@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
+    <title>分类</title>
     <link rel="icon" href="./favicon.ico">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
@@ -72,23 +72,33 @@
                 </li>
             </ul>
         </div>
+
+
         <script type="text/html" id="cateTpl">
             {{each rows v i}}
-            <li><a href="#" data-id={{v.id}} class="{{i === 0?'current':''}}">{{v.categoryName}}</a></li>
+            <li><a href="javascript:;" data-id={{v.id}} class="{{i === 0?'current':''}}">{{v.categoryName}}</a></li>
             {{/each}}
         </script>
-        <script type="text/html" id="category">
 
-            <li>
-                    <a href="#"><img src="./images/brand2.png" alt="">
-                    <span>海岸</span></a>
-                </li></script>
-    </div>
-    <script src="./lib/zepto/zepto.min.js"></script>
-    <script src="./lib/artTemplate/template-web.js"></script>
-    <script src="./lib/mui/js/mui.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+        <script type="text/html" id="categoryTpl">
+            {{if rows.length === 0}}
+                <p>没有更多信息</p>
+            {{else}}
+                {{each rows v i}}
+                    <li>
+                        <a href="javascript:;">
+                            <img src="{{v.brandLogo}}" alt="">
+                            <span>{{v.brandName}}</span>
+                        </a>
+                    </li>
+                {{/each }}
+            {{/if}}
+        </script>
+        <script src="./lib/zepto/zepto.min.js"></script>
+        <script src="./lib/artTemplate/template-web.js"></script>
+        <script src="./lib/mui/js/mui.js"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/category.js"></script>
 </body>
 
 </html>
