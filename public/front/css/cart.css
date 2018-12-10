@@ -3,13 +3,15 @@
 }
 .lt_main ul li{
     padding: 0 10px 10px 0;
-    border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
+}
+.mui-table-view-cell > .mui-slider-right{
+    right: -1px;
 }
 .lt_main ul li a{
     width: 100%;
     display: block;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .lt_main ul li .pic{
     width: 60px;
@@ -38,4 +40,5 @@
 }
 .lt_main ul li .info .num{
     color:#666;
+    font-size: 14px;
 }

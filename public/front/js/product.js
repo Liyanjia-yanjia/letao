@@ -1,5 +1,6 @@
 $(function () {
-    var id = getSearch("productid")
+    var id = getSearch("productid");
+    console.log(id);
     $.ajax({
         url: '/product/queryProductDetail',
         dataType: 'json',
@@ -31,7 +32,7 @@ $(function () {
             mui.toast("请选择您的尺码");
         } else {
             mui.confirm("添加成功", '温馨提示', ['去购物车', '继续浏览'], function (e) {
-                console.log(e);
+                // console.log(e);
                 if (e.index === 0) {
                     $.ajax({
                         url: '/cart/addCart',
