@@ -71,10 +71,10 @@
                     </div>
                     <ul>
                             {{each list v i}}
-                        <li>
-                            <a href="searchList.html?key={{v}}" class="mui-clearfix">
-                                {{v}}<i class="btn_delete mui-pull-right mui-icon mui-icon-closeempty"></i>
-                            </a>
+                        <li class="mui-clearfix">
+                            <a href="searchList.html?key={{v}}" class="mui-pull-left">
+                                {{v}} </a>
+                            <i class="btn_delete mui-pull-right mui-icon mui-icon-closeempty"></i>
                         </li>
                         {{/each}}
                     </ul>
