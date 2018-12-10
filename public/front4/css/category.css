@@ -1,0 +1,52 @@
+
+.nav_left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.nav_left ul{
+    background-color: #e3e4e5;
+}
+.nav_left li{
+    height: 50px;
+    width: 100%;
+
+}
+.nav_left li a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color:#666;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.nav_left li a.current{
+    border-right: none;
+    background-color: #fff;
+}
+.nav_right{
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+.nav_right li{
+    width: 33.33%;
+    float: left;
+}
+.nav_right li a{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.nav_right li a span{
+    font-size: 14px;
+    color:#666;
+}
+.nav_right li a img{
+    width: 70px;
+    height: 50px;
+    margin:0 auto;
+}

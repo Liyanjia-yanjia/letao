@@ -1,0 +1,43 @@
+.search{
+    padding: 10px;
+    position: relative;
+}
+.search input{
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border: 1px solid #007AFF;
+}
+.search button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.history{
+    padding: 10px;
+    color:#666;
+    font-size: 12px;
+}
+.history ul{
+    border: 1px dashed #000;
+    margin-top:10px;
+}
+.history ul a{
+    display: block;
+  
+}
+.history ul li{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed #000;
+
+}
+.history ul li:last-child{
+    border-bottom:0;
+}
+.history ul a i{
+    line-height: 30px;
+    color:#666;
+}
