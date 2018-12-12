@@ -1,0 +1,59 @@
+.lt_footer{
+    background-color:#EFEFF4;
+    padding: 10px;
+    border-top: 1px dashed red;
+}
+.lt_footer p{
+    color:#007aff;
+    font-size: 16px;
+    line-height: 36px;
+}
+.lt_footer button{
+    margin-right: 5px;
+}
+.lt_content{
+    position: relative;
+}
+.lt_content .info .name{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lt_content .info .price{
+    padding: 10px;
+}
+.lt_content .info .price .now-price{
+    color:red;
+}
+.lt_content .info .price .old-price{
+    color:#666;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+.lt_content .info .size{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden;
+}
+.lt_content .info .size span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    border: 1px solid #999;
+    margin:5px;
+}
+.lt_content .info .num{
+    padding: 10px;
+}
+.lt_content .info .num span{
+    font-size: 14px;
+    color:#666;
+}
+.lt_content .info .detail{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
